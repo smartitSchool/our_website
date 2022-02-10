@@ -1,0 +1,22 @@
+.social-icons{
+    color: #0071BB;
+    margin-left: 10px;
+    font-size: 2rem;
+    transition: all 0.5s;
+}
+
+.social-icons:hover{
+    color: #32527F;
+}
+
+.contact{
+    color: #0071BB;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.phone-icon{
+    
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}

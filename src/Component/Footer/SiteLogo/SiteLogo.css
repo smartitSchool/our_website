@@ -1,0 +1,25 @@
+.footer-slogan{
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.footer-social-icon{
+    font-size: 1.5rem;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.footer-social-icon:hover{
+    background-color: white;
+}
+.footer-social-icon:hover a{
+    color: #0071BB;
+}

@@ -1,0 +1,14 @@
+.logo{
+    width: 100px;
+}
+
+
+
+
+@media only screen and (max-width: 991px) {
+    .logo-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
