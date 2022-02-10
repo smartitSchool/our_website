@@ -1,0 +1,17 @@
+.facilities-card{
+    background-color: aqua;
+}
+
+.facilities-icon{
+    font-size: 4rem;
+    padding: 20px;
+}
+
+.card-styles{
+    border: none;
+    transition: all 0.5s;
+}
+
+.card-styles:hover{
+box-shadow: 2px 2px 10px gainsboro;
+}

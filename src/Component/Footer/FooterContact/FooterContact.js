@@ -9,19 +9,19 @@ import './FooterContact.css'
 const FooterContact = () => {
     return (
         <Container className='my-3'>
-            <h2 className='color-white text-center'>
+            <h2 className='color-a text-center'>
                 Contacts
             </h2>
             <ul className='list-styles-none'>
                 <li>
                     <Row className='d-flext align-items-center'>
                         <Col sm={2}>
-                            <div className='footer-icons color-white'>
+                            <div className='footer-icons color-a'>
                                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                             </div>
                         </Col>
                         <Col sm={10}>
-                            <address className='color-white mx-2'>
+                            <address className='color-a mx-2'>
                                 Chowrongi Super Market, Shop No: 4,5,6,7,8 (4th Floor) Savar bustand , savar, Dhaka-1340.
                             </address>
                         </Col>
@@ -30,13 +30,13 @@ const FooterContact = () => {
                 <li>
                     <Row className='d-flext align-items-center'>
                         <Col sm={2}>
-                            <div className='footer-icons color-white'>
+                            <div className='footer-icons color-a'>
                                 <FontAwesomeIcon icon={faPhoneAlt} />
                             </div>
                         </Col>
                         <Col sm={10}>
                             <div className='mx-3'>
-                                <p className='color-white'>
+                                <p className='color-a'>
                                     +880 1688667870 <br /> +880 1747099119
                                 </p>
                             </div>
@@ -46,13 +46,13 @@ const FooterContact = () => {
                 <li>
                     <Row className='d-flext align-items-center'>
                         <Col sm={2}>
-                            <div className='footer-icons color-white'>
+                            <div className='footer-icons color-a'>
                                 <FontAwesomeIcon icon={faEnvelopeOpen} />
                             </div>
                         </Col>
                         <Col sm={10}>
                             <div className='mx-3'>
-                                <p className='color-white'>
+                                <p className='color-a'>
                                     info@smartitschool.com
                                 </p>
                             </div>

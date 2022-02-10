@@ -15,12 +15,14 @@ const HomeCourses = () => {
 
     return (
         <div>
+            <h2 className='color-a'>Our Courses</h2>
+            <hr/>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
                 loop={true}
                 autoplay={{
-                    delay: 4000,
+                    delay: 3000,
                     disableOnInteraction: false,
                     pauseOnMouseEnter:true
                   }}

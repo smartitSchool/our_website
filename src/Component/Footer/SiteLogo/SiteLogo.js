@@ -10,33 +10,33 @@ const SiteLogo = () => {
         <div className='p-4'>
             <Container>
                 <Image src={image} fluid={true} />
-                <p className='footer-slogan color-white'>Be skilled at IT, Life will be shine.</p>
+                <p className='footer-slogan color-a'>Be skilled at IT, Life will be shine.</p>
                 <br />
                 <Row className='text-center'>
                     <Col sm={3}>
                         <div className='footer-social-icon'>
-                            <a className='color-white' href='https://www.facebook.com/SmartItSchool.com.bd' target='_blank' rel='noreferrer'>
+                            <a className='color-a' href='https://www.facebook.com/SmartItSchool.com.bd' target='_blank' rel='noreferrer'>
                                 <FontAwesomeIcon icon={faFacebookF} />
                             </a>
                         </div>
                     </Col>
                     <Col sm={3}>
                         <div className='footer-social-icon'>
-                            <a className='color-white' href='https://www.facebook.com/SmartItSchool.com.bd' target='_blank' rel='noreferrer'>
+                            <a className='color-a' href='https://www.facebook.com/SmartItSchool.com.bd' target='_blank' rel='noreferrer'>
                                 <FontAwesomeIcon icon={faYoutube} />
                             </a>
                         </div>
                     </Col>
                     <Col sm={3}>
                         <div className='footer-social-icon'>
-                            <a className='color-white' href='https://www.facebook.com/SmartItSchool.com.bd' target='_blank' rel='noreferrer'>
+                            <a className='color-a' href='https://www.facebook.com/SmartItSchool.com.bd' target='_blank' rel='noreferrer'>
                                 <FontAwesomeIcon icon={faLinkedinIn} />
                             </a>
                         </div>
                     </Col>
                     <Col sm={3}>
                         <div className='footer-social-icon'>
-                            <a className='color-white' href='https://www.facebook.com/SmartItSchool.com.bd' target='_blank' rel='noreferrer'>
+                            <a className='color-a' href='https://www.facebook.com/SmartItSchool.com.bd' target='_blank' rel='noreferrer'>
                                 <FontAwesomeIcon icon={faTwitter} />
                             </a>
                         </div>

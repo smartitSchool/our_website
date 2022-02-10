@@ -5,36 +5,36 @@ import './QuickLinks.css'
 
 const QuickLinks = () => {
     return (
-        <Container>
-            <h2 className='color-white'>Quick Links</h2>
+        <Container className='my-3'>
+            <h2 className='color-a'>Quick Links</h2>
             <ul className='list-styles-none'>
                 <li>
-                    <Link to='/courses' className='menu-item color-white'>
+                    <Link to='/courses' className='menu-item color-a'>
                         Courses
                     </Link>
                 </li>
                 <li>
-                    <Link to='/services' className='menu-item color-white'>
+                    <Link to='/services' className='menu-item color-a'>
                         Services
                     </Link>
                 </li>
                 <li>
-                    <Link to='/admission' className='menu-item color-white'>
+                    <Link to='/admission' className='menu-item color-a'>
                         Admission
                     </Link>
                 </li>
                 <li>
-                    <Link to='/facilities' className='menu-item color-white'>
+                    <Link to='/facilities' className='menu-item color-a'>
                         Facilities
                     </Link>
                 </li>
                 <li>
-                    <Link to='/reviews' className='menu-item color-white'>
+                    <Link to='/reviews' className='menu-item color-a'>
                         Reviews
                     </Link>
                 </li>
                 <li>
-                    <Link to='/gallery' className='menu-item color-white'>
+                    <Link to='/gallery' className='menu-item color-a'>
                         Gallery
                     </Link>
                 </li>
