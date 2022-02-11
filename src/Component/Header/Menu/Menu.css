@@ -1,3 +1,24 @@
-.navbar{
+.navbar {
     background-color: #0071BB;
 }
+
+.active {
+    text-decoration: none;
+    margin: auto 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.active:hover{
+    color: rgb(255 255 255);
+}
+
+.active:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255 255 255);
+  }

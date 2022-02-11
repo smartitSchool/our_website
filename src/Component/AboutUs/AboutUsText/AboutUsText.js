@@ -3,12 +3,13 @@ import React from 'react';
 const AboutUsText = () => {
     return (
         <div>
-            
-            <p className='text-justify'>
-                Smart IT School, one of the leading IT training institutes in Bangladesh offers the best training opportunities. It has been playing a vital role to eradicate the unemployment problem since 2008. Enriched with quality training this institute has never failed to help the individuals to reveal their talents making harmony between creativity and IT. No matter what is your background, we are offering 30 courses for you conducted by experienced trainers to advance your skills.
-            <br/>
-            <br/>
-                SIS has tremendously well-decorated two campuses with upgraded equipment. Our students are very much happy with our culture, environment and outstanding training method. We are passionate about providing good service to our students. Thus, the students of this institute turn out to be successful marketers and establish their careers in various companies as well. We dedicatedly provide flexible training options such as online training, 24/7 support, lifetime post-training support, job placement and so on. We always maintain the standards of excellence which are visible on <a className='link' href='https://www.facebook.com/SmartItSchool.com.bd/reviews' target='_blank' rel='noreferrer'>Facebook Reviews</a> and <a className='link' rel="noreferrer" target='_blank' href="https://smartitschool.com/">Google Reviews</a>.
+
+            <p className='text-justify font-size-a'>
+                Smart IT School is an institution where empowering the community for an excellent standard of learning is what we desire. We endeavor for the continuous improvement of our leaders who will work for constructing a better future. The institute is dedicated to serving the quality training programs under ISO 9001: 2015 certification which remarks us in the IT world. We will continue to share our knowledge for contributing to the success of individuals and to serve society with the best interest.
+
+                We are committed to providing our students with a platform where superiority is the mantra. We nurture the young talent by sharing knowledge, providing supports in learning techniques, co-operating them for international standard projects, making successful freelancers and driving our youth towards a world of entrepreneurship and thus reducing inequalities. Our culture is important to us and our team of experts drives our culture. The skilled human resource make our deliverables valuable that really helps us to set our standard internationally.
+
+                In this fast-paced digital world, achieving in career and reaching in targeted goal is depending on the proper execution of planning, implementing and sustaining changes. So getting there with an institution like us will be your wise choice. Your great experience of learning influences our way of training and thus we serve our students and engage with our commitments. Here we invite you to come and join us to have a change in the result of your life and thus we would be grateful to know you and to strengthen a long-lasting relationship.
             </p>
         </div>
     );
