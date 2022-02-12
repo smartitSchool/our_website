@@ -1,10 +1,14 @@
 import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
 import './AboutBanner.css';
 
-const Banner = () => {
+const Banner = ({bannerText}) => {
+    const arr =[bannerText]
     return (
         <div className='aboutBanner'>
-            <h2 className='color-white'>About SIS</h2>
+           <h2 style={{color:'red'}}>
+               <Typewriter words={arr} loop={false} />
+            </h2>
         </div>
     );
 };

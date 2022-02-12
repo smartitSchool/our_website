@@ -5,10 +5,11 @@ import Header from '../../Component/Header/Header';
 
 
 const Admission = () => {
+    const bannerText='Admission'
     return (
         <div>
             <Header/>
-            <Banner/>
+            <Banner bannerText={bannerText}/>
             <Footer/>            
         </div>
     );

@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const BannerText = () => {
 
-    const arr=['','leading IT institute in BD']
+    const arr=['best IT institute in BD']
     return (
         <div>
             <h2>
