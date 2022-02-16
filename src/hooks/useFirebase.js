@@ -10,6 +10,7 @@ initFirebase();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [isLoading,setIsLoading]=useState(true);
 
     // Auth
     const auth = getAuth();
@@ -27,9 +28,18 @@ const useFirebase = () => {
             } else {
                 setUser({})
             }
+            setIsLoading(false)
         });
         return () => unsubscribe();
     }, [])
+
+
+
+    // sign in  with google
+    const googleSignin=()=>{
+        return signInWithPopup(auth, googleProvider)
+    }
+
 
     // User register function
     const registerUser = (email, password) => {
@@ -64,17 +74,19 @@ const useFirebase = () => {
             });
     }
 
-    const test = 'siam'
+    
 
     return ({
         user,
         setUser,
         error,setError,
         registerUser,
+        googleSignin,
         loginUser,
         logout,
         updateDisplayName,
-        test
+        isLoading,
+        setIsLoading
 
     })
 }
