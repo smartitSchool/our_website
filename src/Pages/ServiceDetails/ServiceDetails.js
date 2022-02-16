@@ -36,6 +36,7 @@ const ServiceDetails = () => {
                     Order this
                 </Button>
                 <OrderModal
+                title={title}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
                 />

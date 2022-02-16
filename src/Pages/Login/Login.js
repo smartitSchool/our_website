@@ -5,8 +5,14 @@ import { Link } from 'react-router-dom';
 import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';
 import useAuth from '../../hooks/useAuth';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const url = location.state?.from || '/home';
+
+
     const { loginUser, setUser, setError, googleSignin } = useAuth();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
@@ -15,6 +21,8 @@ const Login = () => {
         handleLogin(email, password)
         reset()
         alert('Succesfully logged in')
+        navigate(url);
+
     };
 
 

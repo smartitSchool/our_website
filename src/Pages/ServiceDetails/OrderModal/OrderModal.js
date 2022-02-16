@@ -1,24 +1,41 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../hooks/useAuth';
+const axios = require('axios').default;
+
+
 
 const OrderModal = (props) => {
     const { user } = useAuth();
 
     const { register, handleSubmit, reset } = useForm();
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const url = location.state?.from || '/services';
+
+
     // place order
     const onSubmit = data => {
         handlePlaceOrder(data)
         props.onHide();
         reset()
+        
     };
 
 
     // handle order
     const handlePlaceOrder = (customerInfo) => {
-        console.log(customerInfo)
+        const orderInfo={...customerInfo, order_status:'Pending'}
+        axios.post('http://localhost:8081/api/order/addOrder', orderInfo)
+        .then(res=>{
+            if (res.status===200) {
+                alert('Placed your order');
+                navigate(url);
+            }
+        })
     }
     return (
         <Modal
@@ -35,6 +52,8 @@ const OrderModal = (props) => {
             <Modal.Body>
                 <h5>Please fiil this up.</h5>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    <Form.Control  {...register("service_name")} size="md" type="text" value={props.title} />
+                    <br />
                     <Form.Control  {...register("customer_name")} size="md" type="text" value={user?.displayName} />
                     <br />
                     <Form.Control {...register("customer_email")} size="md" type="email" placeholder="Email" value={user?.email} />
