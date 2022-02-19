@@ -66,7 +66,7 @@ const Login = () => {
                 </Col>
             </Container>
             <div className='text-center mb-4'>
-                <sapn>Already have an account?</sapn>
+                <span>Already have an account?</span>
                 <Link to='/register'> Please Register</Link>
             </div>
             <Footer />

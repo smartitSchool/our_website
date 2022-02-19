@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -8,15 +8,24 @@ import "./HomeCourses.css";
 
 // import required modules
 import { Autoplay } from "swiper";
+import HomeCourse from "./HomeCourse/HomeCourse";
 
 
 
 const HomeCourses = () => {
+    const [courses, setCourses] = useState([]);
 
+    useEffect(() => {
+        fetch('http://localhost:8081/api/training/allTrainings')
+            .then(res => res.json())
+            .then(data => {
+                setCourses(data)
+            })
+    }, []);
     return (
         <div>
             <h2 className='color-a'>Our Courses</h2>
-            <hr/>
+            <hr />
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
@@ -24,20 +33,19 @@ const HomeCourses = () => {
                 autoplay={{
                     delay: 3000,
                     disableOnInteraction: false,
-                    pauseOnMouseEnter:true
-                  }}
-                  modules={[Autoplay]}
+                    pauseOnMouseEnter: true
+                }}
+                modules={[Autoplay]}
                 className="mySwiper"
             >
-                <SwiperSlide> <img src='https://www.logodesign.net/images/nature-logo.png' alt='' /> </SwiperSlide>
-                <SwiperSlide><img src='https://www.logodesign.net/images/nature-logo.png' alt='' /></SwiperSlide>
-                <SwiperSlide><img src='https://www.logodesign.net/images/nature-logo.png' alt='' /></SwiperSlide>
-                <SwiperSlide><img src='https://www.logodesign.net/images/nature-logo.png' alt='' /></SwiperSlide>
-                <SwiperSlide><img src='https://www.logodesign.net/images/nature-logo.png' alt='' /></SwiperSlide>
-                <SwiperSlide><img src='https://www.logodesign.net/images/nature-logo.png' alt='' /></SwiperSlide>
-                <SwiperSlide><img src='https://www.logodesign.net/images/nature-logo.png' alt='' /></SwiperSlide>
-                <SwiperSlide><img src='https://www.logodesign.net/images/nature-logo.png' alt='' /></SwiperSlide>
-                <SwiperSlide><img src='https://www.logodesign.net/images/nature-logo.png' alt='' /></SwiperSlide>
+{
+                    courses.map(course=><SwiperSlide>
+                        <HomeCourse 
+                        key={course.id}
+                        course={course}
+                        />
+                    </SwiperSlide>)
+                }
             </Swiper>
         </div>
     );

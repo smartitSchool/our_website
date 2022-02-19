@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from "react-router-dom"
+import { useParams } from 'react-router-dom';
 import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';
-import OrderModal from './OrderModal/OrderModal';
 
-
-const ServiceDetails = () => {
-    const [modalShow, setModalShow] = useState(false);
-    const [service, setService] = useState({});
+const CourseDetails = () => {
+    const [course, setCourse] = useState({});
     const { id } = useParams();
 
-    const { title, description, price, image } = service;
+    const { course_name, description, fee, image } = course;
 
     useEffect(() => {
-        fetch(`http://localhost:8081/api/services/${id}`)
+        fetch(`http://localhost:8081/api/training/${id}`)
             .then(res => res.json())
             .then(data => {
-                setService(data)
+                setCourse(data)
             })
     }, [id])
 
@@ -31,26 +28,26 @@ const ServiceDetails = () => {
                         <div className='detail-image-container'>
                             <img className='img-fluid' src={`http://localhost:8081/${image}`} alt='' />
                         </div>
-                        <button className='wide-btn-outline my-4' onClick={() => setModalShow(true)}>
+                        {/* <buton className='wide-btn-outline my-4' onClick={() => setModalShow(true)}>
                             Proceed to order
-                        </button>
+                        </buton> */}
                     </Col>
-                    <Col  className='' md={6} xs={12}>
-                        <h2 className='' >{title}</h2>
+                    <Col md={6} xs={12} className=''>
+                        <h2 className='' >{course_name}</h2>
                         <p>{description}</p>
-                        <h5 className='fw-bold'>Price: <span className='color-a'>{price} BDT</span> </h5>
+                        <h5 className='fw-bold'>Price: <span className='color-a'>{fee} BDT</span> </h5>
 
                     </Col>
                 </Row>
-                <OrderModal
+                {/* <OrderModal
                     title={title}
                     show={modalShow}
                     onHide={() => setModalShow(false)}
-                />
+                /> */}
             </Container>
             <Footer />
         </div>
     );
 };
 
-export default ServiceDetails;
+export default CourseDetails;

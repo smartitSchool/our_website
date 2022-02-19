@@ -53,6 +53,7 @@
 .btn-a{
   background-color: #0071BB;
   color: white;
+  cursor: pointer;
   transition: all 0.5s;
 }
 
@@ -84,7 +85,32 @@
   list-style:disc;
 }
 
+.wide-btn-outline{
+  background-color: #0071BB;
+  color: white;
+  outline: none;
+  width: 100%;
+  display: inline-block;
+  padding: 10px 0px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+}
 
+.wide-btn-outline:hover{
+  background-color: #024a7a;
+}
+
+
+.detail-image-container{
+  padding: 10px;
+  border: 1px solid #0071BB;
+}
+
+
+.swiper-item-image{
+  height: 25vh !important;
+}
 
 
 

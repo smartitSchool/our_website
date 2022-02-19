@@ -6,6 +6,7 @@ import AuthProvider from './context/AuthProvider/AuthProvider';
 import About from './Pages/About/About';
 import Admission from './Pages/Admission/Admission';
 import Contact from './Pages/Contact/Contact';
+import CourseDetails from './Pages/CourseDetails/CourseDetails';
 import Courses from './Pages/Courses/Courses';
 import Facilities from './Pages/Facilities/Facalities';
 import Gallery from './Pages/Gallery/Gallery';
@@ -36,6 +37,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/details/:id' element={<PrivateRoute><ServiceDetails/></PrivateRoute>}/>
+          <Route path='/courseDetails/:id' element={<CourseDetails/>}/>
           <Route path='/' element={<Home />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
