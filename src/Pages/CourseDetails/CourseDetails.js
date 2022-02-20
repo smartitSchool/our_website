@@ -28,7 +28,7 @@ const CourseDetails = () => {
                         <div className='detail-image-container'>
                             <img className='img-fluid' src={`http://localhost:8081/${image}`} alt='' />
                         </div>
-                        {/* <buton className='wide-btn-outline my-4' onClick={() => setModalShow(true)}>
+                        {/* <buton className='wide-btn-fill my-4' onClick={() => setModalShow(true)}>
                             Proceed to order
                         </buton> */}
                     </Col>

@@ -1,0 +1,19 @@
+input[type="file"] {
+    display: none;
+}
+
+.image-upload{
+    border: 1px solid #0071BB;
+    background-color: #cce8fa48;
+    color: #0071BB;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.selected-file{
+    color: #f42a41;
+}

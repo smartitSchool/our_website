@@ -62,6 +62,35 @@
   color: white;
 }
 
+.btn-b{
+  background-color: #f42a41;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn-b:hover{
+    background-color: #bb2839;
+    color: white;
+}
+
+.wide-btn-fill{
+  background-color: #0071BB;
+  color: white;
+  outline: none;
+  width: 100%;
+  display: inline-block;
+  padding: 10px 0px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.wide-btn-fill:hover{
+  background-color: #024a7a;
+  color: white;
+}
+
 
 .text-justify{
   text-align: justify;
@@ -85,21 +114,7 @@
   list-style:disc;
 }
 
-.wide-btn-outline{
-  background-color: #0071BB;
-  color: white;
-  outline: none;
-  width: 100%;
-  display: inline-block;
-  padding: 10px 0px;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.5s;
-}
 
-.wide-btn-outline:hover{
-  background-color: #024a7a;
-}
 
 
 .detail-image-container{
@@ -110,6 +125,11 @@
 
 .swiper-item-image{
   height: 25vh !important;
+}
+
+
+.page-heading-margin{
+  margin: 50px auto;
 }
 
 

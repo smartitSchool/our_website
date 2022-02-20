@@ -1,0 +1,6 @@
+.contact-body{
+    background-image: url(../../../public/Image/contact-background-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -18,11 +18,13 @@ const Services = () => {
     return (
         <>
             <Header />
-            <Banner bannerText='Our Services'/>
+
+            
+            <Banner bannerText='Our Services' />
             <Container>
-                {services.map(service=><Service
-                key={service.id}
-                service={service}
+                {services.map(service => <Service
+                    key={service.id}
+                    service={service}
                 />)}
             </Container>
             <Footer />
