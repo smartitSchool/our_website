@@ -4,9 +4,7 @@
         background-image: url('../../../Images//about-us-banner.jpg');
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: scroll;
         background-size: cover;
         display: flex;
-        justify-content: center;
         align-items: center;
 }

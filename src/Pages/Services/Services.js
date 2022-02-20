@@ -15,12 +15,18 @@ const Services = () => {
                 setServices(data)
             })
     }, []);
+
+
+    const bannerText=['Web Development', 'ID Card Making', 'Calender Making']
     return (
         <>
             <Header />
 
             
-            <Banner bannerText='Our Services' />
+            <Banner
+                bannerText={bannerText}
+                pageName='Services'
+            />
             <Container>
                 {services.map(service => <Service
                     key={service.id}

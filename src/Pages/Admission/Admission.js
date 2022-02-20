@@ -53,11 +53,14 @@ const Admission = () => {
 
 
 
-    const bannerText='Admission'
+    const bannerText=['Get admission', 'Learn with Experts', 'Explore our service']
     return (
         <div>
             <Header/>
-            <Banner bannerText={bannerText} />
+            <Banner
+                bannerText={bannerText}
+                pageName='Admission'
+            />
             <Container>
                 <div className="page-heading-margin">
                     <h1 className='color-a'>Get Admission</h1>

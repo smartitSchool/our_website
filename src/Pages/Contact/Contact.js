@@ -17,10 +17,15 @@ const Contact = () => {
     }
 
 
+    const bannerText=['Give us your suggestion', 'Send Your feedback']
+
     return (
         <>
             <Header />
-            <Banner bannerText={'Contact us'} />
+            <Banner
+                bannerText={bannerText}
+                pageName={'Contact'}
+            />
             <div className='contact-body'>
                 <Container className='py-4'>
                     <Row>

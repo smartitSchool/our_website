@@ -6,10 +6,14 @@ import Header from '../../Component/Header/Header';
 import HomeFacilities from '../../Component/HomeFacilities/HomeFacilities';
 
 const Facilities = () => {
+    const bannerText = ['Our facilities--', 'Lifetime Support', '24/7 Support', 'Practise Lab Support', 'Class Video', 'Review Class','Job Placement']
     return (
         <>
             <Header />
-            <Banner bannerText={'Our Facilities'}/>
+            <Banner
+                bannerText={bannerText}
+                pageName='Facilities'
+            />
             <Container className='my-4'>
                 <HomeFacilities/>
             </Container>

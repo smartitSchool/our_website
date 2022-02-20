@@ -15,10 +15,16 @@ const Courses = () => {
                 setCourses(data)
             })
     }, []);
+
+
+    const bannerText=['Web Development', 'Graphic Design', 'Auto CAD (2D & 3D)', 'UI/UX Design' ,'Al Quran Training']
     return (
         <>
             <Header />
-            <Banner bannerText='Our Courses'/>
+            <Banner
+                bannerText={bannerText}
+                pageName='Courses'
+            />
             <Container>
                 {courses.map(course=><Course
                 key={course.id}

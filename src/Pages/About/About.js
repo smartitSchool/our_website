@@ -11,11 +11,14 @@ import Value from '../../Component/AboutUs/Value/Value';
 import Culture from '../../Component/AboutUs/Culture/Culture';
 
 const About = () => {
-    const bannerText='About Us'
+    const bannerText=['Explore our website', 'Learn more about us']
     return (
         <div className=''>
             <Header />
-            <Banner bannerText={bannerText} />
+            <Banner
+                bannerText={bannerText}
+                pageName='About us'
+            />
             <Container className='my-4'>
                 <h2 className='color-a'>Overview</h2>
                 <hr />
