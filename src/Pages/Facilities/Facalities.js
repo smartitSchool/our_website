@@ -13,6 +13,7 @@ const Facilities = () => {
             <Banner
                 bannerText={bannerText}
                 pageName='Facilities'
+                imageLink='https://i.ibb.co/6H4zLhm/v796-nunny-03b.jpg'
             />
             <Container className='my-4'>
                 <HomeFacilities/>

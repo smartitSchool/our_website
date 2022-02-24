@@ -1,12 +1,21 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Typewriter } from 'react-simple-typewriter';
-import './AboutBanner.css';
 
-const Banner = ({bannerText, pageName}) => {
-    const arr = bannerText
+const Banner = ({bannerText, pageName, imageLink}) => {
+    const arr = bannerText;
+    const bannerStyle = {
+        height: '400px',
+        width: '100%',
+        backgroundImage: `url(${imageLink})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        display: 'flex',
+        alignItems: 'center'
+    }
     return (
-        <div className='aboutBanner'>
+        <div style={bannerStyle}>
             <Container>
                 <h2>Smart IT School / { pageName}</h2>
                 <h2 className='color-white'>&nbsp;

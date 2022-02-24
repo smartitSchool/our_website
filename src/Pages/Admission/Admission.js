@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Form,  Row } from 'react-bootstrap';
 import Banner from '../../Component/AboutUs/Banner/Banner';
 import Footer from '../../Component/Footer/Footer';
@@ -15,6 +15,18 @@ const Admission = () => {
     const [fileName,setFileName]=useState('')
     const { register, handleSubmit } = useForm()
 
+// load all courses
+    const [courses,setCourses]=useState([])
+    useEffect(() => {
+        fetch('http://localhost:8081/api/training/allTrainings')
+            .then(res => res.json())
+            .then(data => {
+                setCourses(data)
+            })
+    }, []);
+
+
+
 
     const handleFileNameSave = (e) => {
         setFileName(e.target.files[0].name)
@@ -30,6 +42,7 @@ const Admission = () => {
         admissionFormData.append('mothersName', data.mothersName)
         admissionFormData.append('presentAddress', data.presentAddress)
         admissionFormData.append('permanentAddress', data.permanentAddress)
+        admissionFormData.append('selectedCourse', data.selectedCourse)
         admissionFormData.append('DOB', data.DOB)
         admissionFormData.append('bloodGroup', data.bloodGroup)
         admissionFormData.append('gender', data.gender)
@@ -60,14 +73,13 @@ const Admission = () => {
             <Banner
                 bannerText={bannerText}
                 pageName='Admission'
+                imageLink='https://i.ibb.co/6H4zLhm/v796-nunny-03b.jpg'
             />
             <Container>
-                <div className="page-heading-margin">
-                    <h1 className='color-a'>Get Admission</h1>
-                    <hr />
-                </div>
+                
+                <h2 className='page-heading'><u>Get</u> Admission</h2>
                 <p className='font-size-a' >You can get admission in tow ways, Online and Offline. To get admission at online, please fill up the information. If you want to get admission at offline, <a href="Image/admission-form-smart-it-school.jpg" className='link' download>Download</a>  the admission form and submit the form at our office.</p>
-                <h3 className='color-a mt-4 text-center'>Online Admission Form</h3>
+                <h3 className='mt-4 sub-heading'>Online Admission Form</h3>
 
 
 
@@ -121,6 +133,18 @@ const Admission = () => {
                         <Col xs={12} md={6}>
                             <Form.Label>Permanent Address*</Form.Label>
                             <Form.Control as='textarea' {...register("permanentAddress")} type="text" placeholder="Permanent Address" required />
+                        </Col>
+                    </Row>
+                    <Row className='mt-4'>
+                        <Col md={12}>
+                            <Form.Label>Select a Course</Form.Label>
+                            <Form.Control as='select' {...register("selectedCourse")}>
+                                {
+                                    courses.map(course => <option value={course.course_name}>
+                                        {course.course_name}
+                                    </option>)
+                                }
+                            </Form.Control>
                         </Col>
                     </Row>
                     <Row className='mt-4'>

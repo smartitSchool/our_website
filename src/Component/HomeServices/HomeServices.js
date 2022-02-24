@@ -15,8 +15,7 @@ const HomeServices = () => {
     }, []);
     return (
         <div>
-            <h2 className='color-a'>Our Services</h2>
-            <hr/>
+            <h2 className='page-heading'><u>Our</u> Services</h2>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}

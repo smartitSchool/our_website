@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@700&display=swap');
 
 /* Common CSS */
 .color-a{
   color: #0071BB;
+}
+
+.color-b{
+  color: #f42a41; 
 }
 .color-white{
   color: white;
@@ -84,6 +88,7 @@
   cursor: pointer;
   text-align: center;
   transition: all 0.5s;
+  outline: none;
 }
 
 .wide-btn-fill:hover{
@@ -99,6 +104,11 @@
 
 .link{
   color: #0071BB;
+  text-decoration: none;
+}
+
+.link-b{
+  color: #f42a41;
   text-decoration: none;
 }
 
@@ -120,17 +130,134 @@
 .detail-image-container{
   padding: 10px;
   border: 1px solid #0071BB;
+  height: 350px;
 }
 
+.thumbnails{
+  height: 100%;
+  width: 100%;
+}
 
 .swiper-item-image{
   height: 25vh !important;
 }
 
 
-.page-heading-margin{
-  margin: 50px auto;
+
+
+.description-container{
+  text-align: justify;
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 2px lightgrey;
+  padding: 10px;
+  overflow: auto;
 }
+
+
+.higlight-style-bg-a{
+  background-color: #f42a41;
+  border-radius: 0px 20px 20px 0px;
+  padding: 5px 50px 5px 10px;
+  color: white;
+  display: inline-block;
+}
+
+.page-heading{
+  font-family: 'Proza Libre', sans-serif;
+  color: #0071BB;
+  font-size: 3rem;
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.sub-heading{
+  font-family: 'Proza Libre', sans-serif;
+  color: #0071BB;
+  font-size: 2rem;
+}
+
+
+
+
+/* Card related styles */
+.custom-card{
+  height: 400px;
+  margin: 10px;
+  border-radius: 0px 0px 10px 10px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.custom-card:hover{
+  box-shadow: 0px 0px 5px 2px lightgrey;
+}
+
+.card-name{
+  color: #0071BB;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card-text{
+  padding: 10px;
+}
+
+.card-thumbnail{
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+.card-img{
+  height: 100%;
+  width: 100%;
+}
+
+.card-price{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 5px 10px;
+  background-color: #e6d600;
+  font-weight: 600;
+}
+
+.custom-card-footer{
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+/* Scrollbar style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px rgb(214, 212, 212);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c0e3fa;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8dcdf8; 
+}
+
 
 
 

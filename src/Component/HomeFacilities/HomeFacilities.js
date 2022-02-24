@@ -14,8 +14,7 @@ import JobPlacement from './JobPlacement/JobPlacement';
 const HomeFacilities = () => {
     return (
         <div className='my-4'>
-            <h2 className='color-a'>Our Facilities</h2>
-            <hr/>
+            <h2 className='page-heading'><u>Our</u> Facilites</h2>
             <Row xs={1} sm={2} md={3} className="g-4">
             <Col>
                 <Support/>

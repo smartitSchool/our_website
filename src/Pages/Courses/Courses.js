@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Banner from '../../Component/AboutUs/Banner/Banner';
 import Course from '../../Component/Course/Course/Course';
 import Footer from '../../Component/Footer/Footer';
@@ -24,12 +24,16 @@ const Courses = () => {
             <Banner
                 bannerText={bannerText}
                 pageName='Courses'
+                imageLink='https://i.ibb.co/6H4zLhm/v796-nunny-03b.jpg'
             />
-            <Container>
-                {courses.map(course=><Course
-                key={course.id}
-                course={course}
-                />)}
+            <Container className='mb-4'>
+                <h2 className='page-heading'><u>Our</u> Courses</h2>
+                <Row>
+                    {courses.map(course=><Course
+                            key={course.id}
+                            course={course}
+                        />)}    
+                </Row>
             </Container>
             <Footer />
         </>

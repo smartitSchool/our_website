@@ -24,8 +24,7 @@ const HomeCourses = () => {
     }, []);
     return (
         <div>
-            <h2 className='color-a'>Our Courses</h2>
-            <hr />
+            <h2 className='page-heading'><u>Our</u> Courses</h2>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}

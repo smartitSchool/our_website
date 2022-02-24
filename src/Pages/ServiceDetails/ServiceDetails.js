@@ -26,20 +26,23 @@ const ServiceDetails = () => {
         <div>
             <Header />
             <Container>
+
                 <Row className='my-4'>
                     <Col md={6} xs={12}>
                         <div className='detail-image-container'>
-                            <img className='img-fluid' src={`http://localhost:8081/${image}`} alt='' />
+                            <img className='thumbnails' src={`http://localhost:8081/${image}`} alt='' />
                         </div>
+                        
+                    </Col>
+                    <Col md={6} xs={12}>
+                        <h2>{title}</h2>
+                        <div className='description-container'>
+                            {description}
+                        </div>
+                        <p className='fw-bold font-size-a higlight-style-bg-a mt-4'>Price: {price} BDT</p>
                         <button className='wide-btn-fill my-4' onClick={() => setModalShow(true)}>
                             Proceed to order
                         </button>
-                    </Col>
-                    <Col  className='' md={6} xs={12}>
-                        <h2 className='' >{title}</h2>
-                        <p>{description}</p>
-                        <h5 className='fw-bold'>Price: <span className='color-a'>{price} BDT</span> </h5>
-
                     </Col>
                 </Row>
                 <OrderModal

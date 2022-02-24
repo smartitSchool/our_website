@@ -12,6 +12,7 @@ const Gallery = () => {
             <Banner
                 bannerText={bannerText}
                 pageName='Gallery'
+                imageLink='https://i.ibb.co/6H4zLhm/v796-nunny-03b.jpg'
             />
             <Container></Container>
             <Footer/>

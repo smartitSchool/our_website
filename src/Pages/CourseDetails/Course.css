@@ -1,0 +1,23 @@
+.tech-list{
+    width: 100%;
+    flex-wrap:  wrap-reverse;
+    display: flex;
+}
+
+.tech-a{
+    background:linear-gradient(to right, orangered, rgb(250, 122, 76));
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tech-b{
+    background:linear-gradient(to right, rgb(111, 0, 255), rgb(160, 92, 248));
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}

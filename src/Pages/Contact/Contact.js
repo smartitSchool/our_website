@@ -10,10 +10,11 @@ import './Contact.css'
 
 const Contact = () => {
 
-    const { register, handleSubmit } = useForm();
+    const { reset, register, handleSubmit } = useForm();
 
     const onSubmit = (data) => { 
-        console.log(data);
+        alert('We recive your message. Thanks for messaging')
+        reset()
     }
 
 
@@ -24,7 +25,8 @@ const Contact = () => {
             <Header />
             <Banner
                 bannerText={bannerText}
-                pageName={'Contact'}
+                pageName='Contact'
+                imageLink='https://i.ibb.co/6H4zLhm/v796-nunny-03b.jpg'
             />
             <div className='contact-body'>
                 <Container className='py-4'>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Banner from '../../Component/AboutUs/Banner/Banner';
 import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';
@@ -26,12 +26,16 @@ const Services = () => {
             <Banner
                 bannerText={bannerText}
                 pageName='Services'
+                imageLink='https://i.ibb.co/6H4zLhm/v796-nunny-03b.jpg'
             />
-            <Container>
-                {services.map(service => <Service
+            <Container className='mb-4'>
+                <h2 className='page-heading'><u>Our</u> Services</h2>
+                <Row>
+                    {services.map(service => <Service
                     key={service.id}
                     service={service}
                 />)}
+                </Row>
             </Container>
             <Footer />
         </>

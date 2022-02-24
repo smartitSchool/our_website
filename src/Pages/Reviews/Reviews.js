@@ -12,6 +12,7 @@ const Reviews = () => {
             <Banner
                 bannerText={bannerText}
                 pageName='Reviews'
+                imageLink='https://i.ibb.co/6H4zLhm/v796-nunny-03b.jpg'
             />
             <Container></Container>
             <Footer/>
