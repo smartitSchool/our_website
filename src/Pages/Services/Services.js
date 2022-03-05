@@ -17,12 +17,12 @@ const Services = () => {
     }, []);
 
 
-    const bannerText=['Web Development', 'ID Card Making', 'Calender Making']
+    const bannerText = ['Web Development', 'ID Card Making', 'Calender Making']
     return (
         <>
             <Header />
 
-            
+
             <Banner
                 bannerText={bannerText}
                 pageName='Services'
@@ -32,9 +32,9 @@ const Services = () => {
                 <h2 className='page-heading'><u>Our</u> Services</h2>
                 <Row>
                     {services.map(service => <Service
-                    key={service.id}
-                    service={service}
-                />)}
+                        key={service.id}
+                        service={service}
+                    />)}
                 </Row>
             </Container>
             <Footer />

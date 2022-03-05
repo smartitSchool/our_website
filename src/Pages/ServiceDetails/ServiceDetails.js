@@ -32,12 +32,12 @@ const ServiceDetails = () => {
                         <div className='detail-image-container'>
                             <img className='thumbnails' src={`http://localhost:8081/${image}`} alt='' />
                         </div>
-                        
+
                     </Col>
                     <Col md={6} xs={12}>
                         <h2>{title}</h2>
                         <div className='description-container'>
-                            {description}
+                            <div dangerouslySetInnerHTML={{ __html: description }} />
                         </div>
                         <p className='fw-bold font-size-a higlight-style-bg-a mt-4'>Price: {price} BDT</p>
                         <button className='wide-btn-fill my-4' onClick={() => setModalShow(true)}>

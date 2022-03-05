@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Form,  Row } from 'react-bootstrap';
+import { Col, Container, Form, Row } from 'react-bootstrap';
 import Banner from '../../Component/AboutUs/Banner/Banner';
 import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';
@@ -12,11 +12,11 @@ import { faUpload } from '@fortawesome/free-solid-svg-icons'
 
 
 const Admission = () => {
-    const [fileName,setFileName]=useState('')
+    const [fileName, setFileName] = useState('')
     const { register, handleSubmit } = useForm()
 
-// load all courses
-    const [courses,setCourses]=useState([])
+    // load all courses
+    const [courses, setCourses] = useState([])
     useEffect(() => {
         fetch('http://localhost:8081/api/training/allTrainings')
             .then(res => res.json())
@@ -59,24 +59,24 @@ const Admission = () => {
         axios.post('http://localhost:8081/api/admission/addAdmission', admissionFormData)
             .then(res => {
                 if (res.status === 200) {
-                alert('Your admission form has been Submitted')
+                    alert('Your admission form has been Submitted')
                 }
             });
     };
 
 
 
-    const bannerText=['Get admission', 'Learn with Experts', 'Explore our service']
+    const bannerText = ['Get admission', 'Learn with Experts', 'Explore our service']
     return (
         <div>
-            <Header/>
+            <Header />
             <Banner
                 bannerText={bannerText}
                 pageName='Admission'
                 imageLink='https://i.ibb.co/6H4zLhm/v796-nunny-03b.jpg'
             />
             <Container>
-                
+
                 <h2 className='page-heading'><u>Get</u> Admission</h2>
                 <p className='font-size-a' >You can get admission in tow ways, Online and Offline. To get admission at online, please fill up the information. If you want to get admission at offline, <a href="Image/admission-form-smart-it-school.jpg" className='link' download>Download</a>  the admission form and submit the form at our office.</p>
                 <h3 className='mt-4 sub-heading'>Online Admission Form</h3>
@@ -85,22 +85,23 @@ const Admission = () => {
 
                 {/* admission form */}
                 <form onSubmit={handleSubmit(onSubmit)} method='POST' encType='multipart/form-data'>
-                    
+
                     {/* avatar upload */}
-                    <label className='image-upload'>
+
+                    <label className='input-file-label'>
                         <input
+                            className='inputfile'
                             type="file"
                             name='avatar'
                             accept="image/png, image/jpeg, image/jpg"
                             {...register('avatar')}
-                            onChange={(e)=>handleFileNameSave(e)}
+                            onChange={(e) => handleFileNameSave(e)}
+                            required
                         />
-                        
-                        <FontAwesomeIcon icon={faUpload} className='font-size-a'/>
-                        <br />
+                        <FontAwesomeIcon icon={faUpload} className='font-size-a' />
                         {
                             fileName
-                            ?
+                                ?
                                 <span><span className='selected-file'>"{fileName}" </span>is selected</span> :
                                 'Upload your passport size image (only JPG, PNG and JPEG) >1MB is required'
                         }
@@ -108,11 +109,11 @@ const Admission = () => {
                     <Row className='mt-4'>
                         <Col xs={12} md={6}>
                             <Form.Label>Your Name*</Form.Label>
-                            <Form.Control {...register("name")} type="text" placeholder="Your Full Name" required/>
+                            <Form.Control {...register("name")} type="text" placeholder="Your Full Name" required />
                         </Col>
                         <Col xs={12} md={6}>
                             <Form.Label>NID/Birth Cerftificate/Passport</Form.Label>
-                            <Form.Control {...register("nid")} type="number" placeholder="NID/Birth Cerftificate/ Passport" required/>
+                            <Form.Control {...register("nid")} type="number" placeholder="NID/Birth Cerftificate/ Passport" required />
                         </Col>
                     </Row>
                     <Row className='mt-4'>
@@ -150,7 +151,7 @@ const Admission = () => {
                     <Row className='mt-4'>
                         <Col xs={12} md={4}>
                             <Form.Label>Date of birth (mm/dd/yyyy)*</Form.Label>
-                            <Form.Control {...register("DOB")} type='date' required/>
+                            <Form.Control {...register("DOB")} type='date' required />
                         </Col>
                         <Col xs={12} md={4}>
                             <Form.Label>Select Blood Group</Form.Label>
@@ -165,16 +166,16 @@ const Admission = () => {
                         </Col>
                         <Col xs={12} md={4}>
                             <Form.Label>Gender* </Form.Label> <br />
-                            <input type="radio" name="male" value='Male' {...register("gender")}/>
+                            <input type="radio" name="male" value='Male' {...register("gender")} />
                             <label className='ms-1' htmlFor="male">Male</label>
-                            <input className='ms-4' type="radio" name="female" value='Female'{...register("gender")}/>
+                            <input className='ms-4' type="radio" name="female" value='Female'{...register("gender")} />
                             <label className='ms-1' htmlFor="femail">Female</label>
                         </Col>
                     </Row>
                     <Row className='mt-4'>
                         <Col xs={12} md={6}>
                             <Form.Label>Ocupation*</Form.Label>
-                            <Form.Control placeholder='Your Ocupation' {...register("ocupation")} required/>
+                            <Form.Control placeholder='Your Ocupation' {...register("ocupation")} required />
                         </Col>
                         <Col xs={12} md={6}>
                             <Form.Label>Nationality*</Form.Label>
@@ -187,15 +188,15 @@ const Admission = () => {
                     <Row className='mt-4'>
                         <Col xs={12} md={4}>
                             <Form.Label> Phone*</Form.Label>
-                            <Form.Control type='tel' {...register("phone")} required placeholder='Your Current Contact No'/>
+                            <Form.Control type='tel' {...register("phone")} required placeholder='Your Current Contact No' />
                         </Col>
                         <Col xs={12} md={4}>
                             <Form.Label> Secondary Phone</Form.Label>
-                            <Form.Control type='tel'  {...register("phone2")} placeholder='Secondary Contact No (if applicable)'/>
+                            <Form.Control type='tel'  {...register("phone2")} placeholder='Secondary Contact No (if applicable)' />
                         </Col>
                         <Col xs={12} md={4}>
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type='email'  {...register("email")} placeholder='Email Address'/>
+                            <Form.Control type='email'  {...register("email")} placeholder='Email Address' />
                         </Col>
                     </Row>
                     <Row className='mt-4'>
@@ -205,18 +206,18 @@ const Admission = () => {
                         </Col>
                         <Col xs={12} md={4}>
                             <Form.Label>Another Contact</Form.Label>
-                            <Form.Control type='tel'  {...register("gurdianContact2")} placeholder='Another contact of gurdian'/>
+                            <Form.Control type='tel'  {...register("gurdianContact2")} placeholder='Another contact of gurdian' />
                         </Col>
                         <Col xs={12} md={4}>
                             <Form.Label>Relation</Form.Label>
-                            <Form.Control type='text' placeholder='Relation with this gurdian'  {...register("gurdianRelation")}/>
+                            <Form.Control type='text' placeholder='Relation with this gurdian'  {...register("gurdianRelation")} />
                         </Col>
                     </Row>
-                    <input type="submit" value="Submit" className='wide-btn-fill btn mt-4'/>
+                    <input type="submit" value="Submit" className='wide-btn-fill btn mt-4' />
                 </form>
                 <br />
             </Container>
-            <Footer/>            
+            <Footer />
         </div>
     );
 };

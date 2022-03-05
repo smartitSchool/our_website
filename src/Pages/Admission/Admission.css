@@ -1,8 +1,13 @@
-input[type="file"] {
-    display: none;
+.inputfile{
+    	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
-.image-upload{
+.input-file-label {
     border: 1px solid #0071BB;
     background-color: #cce8fa48;
     color: #0071BB;
@@ -13,6 +18,9 @@ input[type="file"] {
     width: 100%;
     text-align: center;
 }
+
+
+
 
 .selected-file{
     color: #f42a41;
